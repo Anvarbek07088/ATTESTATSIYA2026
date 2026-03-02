@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATESTATSIYA 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Device ID tekshirish -->
+<div id="deviceCheck" class="container">
+    <div class="card">
+        <h1>ATESTATSIYA 2026</h1>
+        <p>Qurilma tekshirilmoqda...</p>
+        <div class="loader"></div>
+    </div>
+</div>
+
+<!-- Ruxsat berilmagan qurilma -->
+<div id="unauthorized" class="container hidden">
+    <div class="card error-card">
+        <h1>🚫 RUXSAT BERILMAGAN</h1>
+        <p>Ushbu qurilmadan platformaga kirish mumkin emas.</p>
+        <p class="device-id-display" id="deviceIdDisplay"></p>
+        <button onclick="location.reload()">Qayta urinish</button>
+    </div>
+</div>
+    <!-- Dashboard -->
+    <div id="dashboard" class="container hidden">
+        <header>
+            <h1>ATESTATSIYA 2026</h1>
+            <button id="logoutBtn" class="logout-btn">Chiqish</button>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="info-card">
+                <h2>📢 Attestatsiya haqida</h2>
+                <p>2026-yil attestatsiya jarayoni elektron tarzda o'tkazilmoqda. Barcha testlar online platformada topshiriladi.</p>
+                <ul>
+                    <li>✅ Har bir test 30 soniya davom etadi</li>
+                    <li>✅ Testlar soni: 2 ta</li>
+                    <li>✅ Qayta topshirish imkoniyati mavjud</li>
+                </ul>
+            </div>
+
+            <div class="theory-card">
+                <h2>📚 Nazariy qism</h2>
+                <p>Testlarni boshlashdan oldin quyidagi mavzularni takrorlang:</p>
+                <ul>
+                    <li>📐 Matematika: Algebra va geometriya asoslari</li>
+                    <li>💻 Informatika: Algoritmlar va dasturlash</li>
+                </ul>
+            </div>
+
+            <div class="tests-section">
+                <h2>📝 Testlar bo'limi</h2>
+                <div id="testsList" class="tests-grid">
+                    <!-- Testlar JS orqali qo'shiladi -->
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="social-links">
+                <a href="#" class="social-link">📱 Telegram</a>
+                <a href="#" class="social-link">📷 Instagram</a>
+                <a href="#" class="social-link">▶️ YouTube</a>
+            </div>
+            <p>© ATESTATSIYA 2026. Barcha huquqlar himoyalangan.</p>
+        </footer>
+    </div>
+
+    <!-- Login modal -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <h2 id="modalTestTitle">Testga kirish</h2>
+            <form id="loginForm">
+                <input type="text" id="loginUsername" placeholder="Login" required>
+                <input type="password" id="loginPassword" placeholder="Parol" required>
+                <button type="submit">Kirish</button>
+            </form>
+            <div id="loginError" class="error-message hidden"></div>
+            <button class="close-modal">Yopish</button>
+        </div>
+    </div>
+
+    <!-- Test jarayoni -->
+    <div id="testContainer" class="container hidden">
+        <div class="test-header">
+            <h2 id="testTitle"></h2>
+            <div class="timer-container">
+                <span id="timer">00:00</span>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-container">
+            <div class="question-header">
+                <span id="questionNumber">1/1</span>
+                <span id="questionTimer" class="question-timer">30s</span>
+            </div>
+            <div id="questionText" class="question-text"></div>
+            <div id="optionsContainer" class="options-container"></div>
+        </div>
+    </div>
+
+    <!-- Natijalar modal -->
+    <div id="resultsModal" class="modal hidden">
+        <div class="modal-content results-content">
+            <h2>📊 Test natijalari</h2>
+            <div class="results-stats">
+                <div class="stat-item">
+                    <span class="stat-label">To'g'ri javoblar:</span>
+                    <span id="correctCount" class="stat-value correct">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Noto'g'ri javoblar:</span>
+                    <span id="wrongCount" class="stat-value wrong">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Foiz:</span>
+                    <span id="percentageResult" class="stat-value">0%</span>
+                </div>
+            </div>
+            <button id="closeResultsBtn">Yopish</button>
+        </div>
+    </div>
+
+    <!-- Access Code modal -->
+    <div id="accessCodeModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Qayta topshirish kodi</h2>
+            <p>Testni qayta topshirish uchun access code kiriting:</p>
+            <input type="text" id="accessCodeInput" placeholder="Access code">
+            <button id="verifyAccessCodeBtn">Tekshirish</button>
+            <button class="close-modal">Bekor qilish</button>
+            <div id="accessCodeError" class="error-message hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
