@@ -3,7 +3,7 @@
 // Ruxsat berilgan Device ID lar
 const ALLOWED_DEVICES = [
   "ABC123XYZ",
-  "device_1765658529081_fgn1uvpnj",
+  "device_1765658529081_fgn1uvpnj","FF3LHS",'R4218Y'
   // Sizning Device ID ingizni shu yerga qo'shing
 ];
 
