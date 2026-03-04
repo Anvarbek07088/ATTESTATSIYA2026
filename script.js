@@ -16,7 +16,7 @@ const TESTS = {
         title: "Matematika",
         login: "math2026",
         password: "12345",
-        accessCode: "RETAKE1",
+        accessCode: "Code123",
         questions: [
             {
                 question: "5 + 3 = ?",
@@ -50,7 +50,7 @@ const TESTS = {
         title: "Informatika (50 ta savol)",
         login: "info2026",
         password: "54321",
-        accessCode: "RETAKE2",
+        accessCode: "Code123",
         questions: [
             {
                 question: "900 MB faylning 30% qismi 12 Mbit/s, qolgan qismi 6 Mbit/s tezlikda yuklandi. Umumiy vaqtni toping.",
